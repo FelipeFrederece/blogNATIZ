@@ -1,0 +1,137 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    background-color: lightgrey;
+}
+
+nav{  
+    position: fixed;
+    display: flex;
+    align-items: left;
+    background-color: #e76b1f;
+    width: 100vw;
+    z-index: 1;
+    margin: 0;
+    justify-content: space-between;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 700;
+    font-size: 28px;
+    font-family: Pacifico, serif;
+    
+}
+
+nav img{
+    width: 20vh;
+    margin-left: 2.5vw;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    background-color: #f1f1f1;
+}
+
+#botoes{
+    margin-right: 5%;
+    margin-top: 3.1vh;
+}
+#botao{
+    margin-right: 3vw;
+    text-decoration:none;    
+    color: white;
+    background-color: aqua;
+    border-radius: 9px;
+    padding: 9px;
+}
+
+header {
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ef5122;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+
+}
+
+#banner{
+
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 10px;
+    width: 100vw;
+	margin-bottom: 5%;
+    z-index: 0;
+    position: center;
+
+}
+
+#bannerimg{
+    width: 100vw;
+}
+
+#titulo{
+    margin-top: -37vh;
+}
+
+
+.box{
+    background-color: aqua;
+    height: 1000px;
+    width: 50px;
+    position: center;
+}
+.box2{
+    background-color: aqua;
+    height: 8vh;
+    width: 50px;
+    position: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+[data-anime] {
+	opacity: 1;
+	transition: .6s;
+}
+
+[data-anime="left"] {
+	transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+	transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+	opacity: 1;
+	transform: translate3d(0vw, -100vh, 0px);
+}
+
+
+
+
+
+
+
