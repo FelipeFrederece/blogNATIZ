@@ -1,8 +1,8 @@
 //PARTE DO INPUT//
-const btn = document.querySelector("#enviar");
+const btn1 = document.querySelector("#enviar1");
 var aventurasArray=[]
 
-btn.addEventListener("click", function (e) {
+btn1.addEventListener("click", function (e) {
 
 	e.preventDefault();
 
@@ -24,12 +24,37 @@ btn.addEventListener("click", function (e) {
 	console.log(aventura.nome);			//somente para teste (print do nome)
 	console.log(aventura.descricao);	//somente para teste (print do texto)
 
-	console.log(aventurasArray)			//somente para teste (print do array(com todas as aventuras adicionadas))
-
+	console.log(aventurasArray[0])			//somente para teste (print do array(com todas as aventuras adicionadas))
+	document.getElementById('enviar1').value ='Aventura cadastrada, obrigado!';
+	setTimeout(function(){
+		document.getElementById('enviar1').value = 'enviar';
+   },3000);
+   document.getElementById('nome').value='';
+   document.getElementById('descricao').value='';
 })
+//funçao que serve para resgatar os dados do input, criar um objeto com cada um (nome e descricao) e colocar dentro de um array
 
-//funçao serve para resgatar os dados do input, criar um objeto com cada um (nome e descricao) e colocar dentro de um array
 
+const btn2 = document.querySelector("#enviar2");
+btn2.addEventListener("click", function (e) {
+	e.preventDefault();
+
+	document.getElementById('resultado').classList.remove("esconder");
+
+	document.getElementById('exibirNome').innerHTML = aventurasArray[0].nome;
+	document.getElementById('exibirDescricao').innerHTML = aventurasArray[0].descricao;
+})
+//para exibir o primeiro nome
+
+const btn3 = document.querySelector("#enviar3");
+btn3.addEventListener("click", function (e) {
+	e.preventDefault();
+	document.getElementById('resultado').classList.remove("esconder");
+
+	document.getElementById('exibirNome').innerHTML = aventurasArray[aventurasArray.length - 1].nome;
+	document.getElementById('exibirDescricao').innerHTML = aventurasArray[aventurasArray.length - 1].descricao;
+})
+//para exibir o ultimo nome
 
 
 //PARTE DA ANIMACAO//
@@ -47,7 +72,6 @@ const debounce = function (func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 };
-
 //funcao para ficar verificando onde está o scroll da pagina
 
 const target = document.querySelectorAll('[data-anime]');
@@ -63,7 +87,6 @@ function animeScroll() {
 		}
 	})
 }
-
 //funcao para calcular a parte certa do scroll onde a animação sera ativada
 
 animeScroll();
@@ -73,5 +96,8 @@ if (target.length) {
 		animeScroll();
 	}, 20));
 }
-
 //if para ativar a animação
+
+
+
+

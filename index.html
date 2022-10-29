@@ -5,8 +5,9 @@
 <head>
   <meta charset="utf-8">
   <title>NATÍZ</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700|Pacifico' rel='stylesheet'
-    type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Wancho&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -29,7 +30,7 @@
 
     <div id="banner">
 
-      <img id="bannerimg" class=" animate" data-anime src=".\img\banner2.png">
+      <img id="bannerimg" class=" animate" data-anime src=".\img\banner1.png">
     </div>
     <div>
       <P id="titulo">Encurtamos a distancia entre você<br>E SUA PROXIMA AVENTURA</P>
@@ -40,19 +41,31 @@
 
   <section id="aventurasSection">
 
-  <div id="adicionarAventura" class="aventurasMargem">
+  <div id="adicionarAventura" class="aventurasCSS">
+    <div id="aventurasTitulo">
     <h1>
       adicionr aventura
     </h1>
+  </div>
 
     <form action="">
       <div class="formulario">
-        <label for="nome">Seu nome:</label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-        <label for="descricao">Sua aventura:</label>
+        <div class="formularioCSS">
+          <div class="padding">
+        <label for="nome" >Seu nome:</label></div>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" >
+      </div>
+      <div class="formularioCSS" >
+        <div class="padding">
+        <label for="descricao">Sua aventura:</label></div>
         <textarea class="descricao" id="descricao" rows="5" placeholder="Descreva sua aventura"></textarea>
+      </div>
+     
+        <input type="submit" id="enviar1" value="enviar">
 
-        <input type="submit" id="enviar" value="enviar">
+     
+
+        
 
 
 
@@ -60,11 +73,32 @@
     </form>
   </div>
 
-  <div id="aventurasAdicionadas" class="aventurasMargem">
+  <div id="aventurasAdicionadas" class="aventurasCSS">
+    <div id="aventurasTitulo">
     <h1>
       aventuras adicionadas
     </h1>
-    
+  </div>
+    <div>
+      <input type="submit" id="enviar2" value="Exibir a primeira aventura adicionada">
+      <input type="submit" id="enviar3" value="Exibir a ultima aventura adicionada">
+    </div>
+    <div id="resultado" class="esconder formularioCSS" >
+      <div>
+        <label for="nome" >Nome:</label>
+    </div>
+    <div id="nome">
+    <div id="exibirNome">
+    </div>
+  </div>
+  <div>
+    <label for="nome" >Aventura:</label>
+</div>
+<div id="nome">
+    <div id="exibirDescricao">
+    </div>
+  </div>
+</div>
   </div>
 </section>
 </body>

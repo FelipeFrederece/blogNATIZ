@@ -1,12 +1,13 @@
 html{
     scroll-behavior: smooth;
+    font-family: 'Noto Sans Wancho', sans-serif;
 }
 
 body{
     margin: 0;
     padding: 0;
     height: 200vh;
-    background-color: lightgrey;
+    background-color: #3c5143;
 }
 
 nav{  
@@ -34,7 +35,6 @@ nav img{
     margin-left: 2.5vw;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
-    background-color: #f1f1f1;
 }
 
 #botoes{
@@ -44,8 +44,11 @@ nav img{
 #botao{
     margin-right: 3vw;
     text-decoration:none;    
-    color: white;
-    background-color: aqua;
+    color: black;
+    border: solid #592a0d;
+border-width: 3px;
+border-radius: 10px;
+background-color: #e3c4b0;
     border-radius: 9px;
     padding: 9px;
 }
@@ -101,51 +104,142 @@ header {
 
 
 #aventurasSection{
-    width: 85vw;
+    width: 95vw;
 	height: auto;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	max-width: 90vw;
+	max-width: 95vw;
 	margin-right: auto;
 	margin-left: auto;
 	align-items: center;
 	max-width: fit-content;
 	justify-content: center;
 }
-.aventurasMargem {
-	margin-left: 66px;
+.aventurasCSS {
+	margin-right: 5vw;
+    margin-left: 5vw;
+    margin-bottom: 20%;
+    transition: all 1s;
 }
 
 #adicionarAventura{
     background-color: #e76b1f;
-    width: 350px;
-	height: 350px;
+    width: 30vw;
+	height: fit-content;
 	position: relative;
 	transform-style: preserve-3d;
-	transition: transform .3s;
+
 	border-radius: 40px;
 }
+
 
 
 
 
 #aventurasAdicionadas{
-    width: 350px;
-	height: 350px;
+    width: 30vw;
+	height: fit-content;
 	position: relative;
 	transform-style: preserve-3d;
-	transition: transform .3s;
 	border-radius: 40px;
-    background-color: aqua;
+    background-color: #e76b1f;
 
+}
+
+#aventurasTitulo{
+
+    position: center;
+    text-align: center;
+}
+
+
+.formularioCSS{
+    border-radius: 10px;
+    background-color: #b45216;
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 15%;
+}
+
+#enviar1{
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-right: 15%;
+    border: solid #592a0d;
+
+    border-width: 3px;
+border-radius: 10px;
+background-color: #e3c4b0;
+}
+#enviar2{
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-right: 15%;
+    border: solid #592a0d;
+
+    border-width: 3px;
+border-radius: 10px;
+background-color: #e3c4b0;
+}
+#enviar3{
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-right: 15%;
+    border: solid #592a0d;
+
+    border-width: 3px;
+border-radius: 10px;
+background-color: #e3c4b0;
 }
 
 
 
+#nome{
+border: solid #592a0d;
+border-width: 3px;
+border-radius: 10px;
+background-color: #e3c4b0;
+margin-bottom: 5%;
+margin-left: 5%;
+}
+input::placeholder {
+    color: black;
+    font-family: 'Noto Sans Wancho', sans-serif;
+  }
+
+.padding{
+    padding: 5%;
+} 
 
 
+#descricao{
+    border: solid #592a0d;
+    border-width: 3px;
+    border-radius: 10px;
+    background-color: #e3c4b0;
+    margin-bottom: 5%;
+    margin-left: 5%;
+
+    resize: none;
+}
+textarea::placeholder {
+  color: black;
+  font-family: 'Noto Sans Wancho', sans-serif;
+}
+
+
+#resultado{
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-right: 15%;
+}
+.esconder{
+    visibility: hidden;
+}
 
 
 
@@ -168,9 +262,25 @@ header {
 	transform: translate3d(0vw, -100vh, 0px);
 }
 
+/*animaçao das sombras*/
+
+.aventurasCSS:hover{
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+
+    -webkit-transform: translate(-3%,-10%) scale(1.07);
+    transform: translate(-3%,-10%) scale(1.07);
+}
 
 
 
+/*RESPONSIVIDADE*/
+@media (max-width: 700px) {
 
 
+}
 
+@media (min-width: 700px) {
+
+
+}
